@@ -91,7 +91,7 @@ class RegistrationController extends Controller
 
         // ensure email is properly set on the account - it's our UID
         if (empty($socialite_user->email))
-            return redirect()->to('seat-connector.identities')
+            return redirect()->to('seat-connector/identities')
                 ->with('error', 'Sorry, but it seems your Discord account does not have any e-mail address setup yet.');
 
         // update or create the connector user
